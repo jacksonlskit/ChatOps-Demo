@@ -19,6 +19,8 @@ resource "aws_lambda_function" "chatops_lambda" {
       BUCKET_NAME         = var.bucket_name
       SNS_TOPIC_ARN       = var.sns_topic_arn
       DISCORD_WEBHOOK_URL = var.discord_webhook_url
+      TELEGRAM_BOT_TOKEN  = var.telegram_bot_token
+      TELEGRAM_CHAT_ID    = var.telegram_chat_id
     }
   }
 }

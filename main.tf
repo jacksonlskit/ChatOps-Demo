@@ -56,6 +56,8 @@ module "lambda" {
   bucket_name         = module.s3.bucket_name
   sns_topic_arn       = module.sns.topic_arn
   discord_webhook_url = var.discord_webhook_url
+  telegram_bot_token  = var.telegram_bot_token
+  telegram_chat_id    = var.telegram_chat_id
   lambda_source_file  = "${path.module}/lambda_src/lambda_function.py"
 }
 
@@ -97,4 +99,12 @@ module "route53" {
   record_name       = "chatops-demo.sctp-sandbox.com"
   public_ip         = module.ec2.public_ip
 
+}
+
+module "sns_notifications" {
+  source = "./module/sns"
+
+  project_name   = var.project_name
+  environment    = var.environment
+  sns_topic_name = var.sns_topic_name
 }

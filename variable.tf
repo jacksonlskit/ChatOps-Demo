@@ -99,3 +99,16 @@ variable "record_name" {
   default = "chatops-demo.sctp-sandbox.com"
 }
 
+variable "telegram_bot_token" {
+  type = string
+  description = "telegrambot token"
+  sensitive = true
+  
+}
+
+variable "telegram_chat_id" {
+  type = string
+  description = "telegam chat id"
+  sensitive = true
+  
+}

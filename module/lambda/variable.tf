@@ -25,3 +25,14 @@ variable "discord_webhook_url" {
 variable "lambda_source_file" {
   type = string
 }
+
+
+variable "telegram_bot_token" {
+  type = string
+  
+}
+
+variable "telegram_chat_id" {
+  type = string
+  
+}
