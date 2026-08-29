@@ -93,11 +93,11 @@ module "keypair" {
 module "route53" {
   source = "./module/route53"
 
-  project_name      = var.project_name
-  environment       = var.environment
-  hosted_zone_name       = "sctp-sandbox.com"
-  record_name       = "chatops-demo.sctp-sandbox.com"
-  public_ip         = module.ec2.public_ip
+  project_name     = var.project_name
+  environment      = var.environment
+  hosted_zone_name = "sctp-sandbox.com"
+  record_name      = "chatops-demo.sctp-sandbox.com"
+  public_ip        = module.ec2.public_ip
 
 }
 

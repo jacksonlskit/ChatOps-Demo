@@ -87,28 +87,28 @@ variable "chatops_subdomain" {
 }
 
 variable "hosted_zone_name" {
-    type = string
-    description = "hosted_zone_name"
-    default = "sctp-sandbox.com"
-  
+  type        = string
+  description = "hosted_zone_name"
+  default     = "sctp-sandbox.com"
+
 }
 
 variable "record_name" {
   type        = string
   description = "Full DNS record name"
-  default = "chatops-demo.sctp-sandbox.com"
+  default     = "chatops-demo.sctp-sandbox.com"
 }
 
 variable "telegram_bot_token" {
-  type = string
+  type        = string
   description = "telegrambot token"
-  sensitive = true
-  
+  sensitive   = true
+
 }
 
 variable "telegram_chat_id" {
-  type = string
+  type        = string
   description = "telegam chat id"
-  sensitive = true
-  
+  sensitive   = true
+
 }
